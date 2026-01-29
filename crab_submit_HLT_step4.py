@@ -16,31 +16,31 @@ def submit(config):
 config                                = config()
 
 
-# v1 1M
-# version         = 'v1'
-# inputDataset    = '/GJets_FlatPtHat_200_2021_05_12_v1_GEN/mwadud-GJets_FlatPtHat_200_2021_05_18_v1_AOD-4778c17ea2cb2100c8a92a7dd65fd785/USER'
+# v1 already submitted by Mohammad - 1M events
+#version         = 'v1'
+#inputDataset    = '/GJets_FlatPtHat_200_2021_05_12_v1_GEN/mwadud-GJets_FlatPtHat_200_2021_05_16_v1_PREMIX-c6365a72a74a01e5fcc8553d79679929/USER'
 
-# For 5M events
+# For Roger - 5M events
 version       = 'v2'
-inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v2_GEN/rusack-GJets_FlatPtHat_200_2021_05_20_v2_AOD-4778c17ea2cb2100c8a92a7dd65fd785/USER'
+inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v2_GEN/rusack-GJets_FlatPtHat_200_2021_05_17_v2_PREMIX-c6365a72a74a01e5fcc8553d79679929/USER'
 
 # For Mohammad - 3M events
-#version       = 'v3'
-#inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v3_GEN/mwadud-GJets_FlatPtHat_200_2021_05_18_v3_AOD-4778c17ea2cb2100c8a92a7dd65fd785/USER'
+# version       = 'v3'
+# inputDataset  = ''
 
 # For Mohammad - 3M events
 #version       = 'v4'
-#inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v4_GEN/rusack-GJets_FlatPtHat_200_2021_05_18_v4_AOD-4778c17ea2cb2100c8a92a7dd65fd785/USER'
+#inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v4_GEN/rusack-GJets_FlatPtHat_200_2021_05_16_v4_PREMIX-c6365a72a74a01e5fcc8553d79679929/USER'
 
-step            = 'MINIAOD'
-pset            = 'aNTGC_GJets_MINIAODSIM_step6.py'
+step            = 'HLT'
+pset            = 'aNTGC_GJets_HLT_step4.py'
 
 # Mohammad
-#workarea        = '/afs/hep.wisc.edu/user/wadud/private/CMSSW_10_6_24/src/Configuration/GenProduction/test/GJetsGen/crab/'
+#workarea        = '/afs/hep.wisc.edu/user/wadud/private/CMSSW_9_4_14_UL_patch1/src/Configuration/GenProduction/test/GJetsGen/crab/'
 #mainOutputDir   = str('/store/user/mwadud/aNTGC/crab/')
 
 # Roger
-workarea      = '/afs/hep.wisc.edu/home/rusack/private/CMSSW_10_6_24/src/Configuration/GenProduction/test/GJetsGen/crab/'
+workarea      = '/afs/hep.wisc.edu/home/rusack/private/CMSSW_9_4_14_UL_patch1/src/Configuration/GenProduction/test/GJetsGen/crab/'
 mainOutputDir = str('/store/user/rusack/aNTGC/crab/')
 
 
@@ -55,8 +55,8 @@ config.General.instance                = 'prod'
 
 config.JobType.pluginName              = 'Analysis'
 config.JobType.psetName                = pset
-config.JobType.maxMemoryMB             = 4000
-config.JobType.maxJobRuntimeMin        = 1000
+config.JobType.maxMemoryMB             = 3200
+config.JobType.maxJobRuntimeMin        = 1200
 config.JobType.numCores	               = 1
 config.JobType.sendExternalFolder      = True
 config.JobType.sendPythonFolder        = True
@@ -66,8 +66,8 @@ config.Data.inputDataset               = inputDataset
 config.Data.allowNonValidInputDataset  = True
 config.Data.outputDatasetTag           = jobName
 config.Data.inputDBS                   = 'phys03'
-config.Data.splitting                  = 'FileBased'
-config.Data.unitsPerJob                = 1
+config.Data.splitting                  = 'EventAwareLumiBased'
+config.Data.unitsPerJob                = 2000
 config.Data.totalUnits                 = 1000000000
 config.Data.publication                = True
 config.Data.outLFNDirBase              = mainOutputDir

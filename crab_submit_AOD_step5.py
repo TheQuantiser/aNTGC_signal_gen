@@ -13,37 +13,42 @@ def submit(config):
     except ClientException as cle:
         print "Failed submitting task: %s" % (cle)
 
-
-workarea                               = '/afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_20/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit'
-mainOutputDir                          = '/store/user/mwadud/aNTGC/crab/'
-
-# pset                                   = 'aNTGC_ZNuNuG_200_UMN_step5_Run2_2016_AODSIM.py'
-# jobName                                = "aNTGC_ZNuNuGamma_200_2016PostVFP_AODSIM"
-# inputDataset                           = '/aNTGC_ZNuNuGamma_200_2016PostVFP_GEN/mwadud-aNTGC_ZNuNuGamma_200_2016PostVFP_HLT-3ab30fc3f54543258c8ebb8fadbb2996/USER'
-# jobName                                = "aNTGC_ZNuNuGamma_600_2016PostVFP_AODSIM"
-# inputDataset                           = '/aNTGC_ZNuNuGamma_600_2016PostVFP_GEN/mwadud-aNTGC_ZNuNuGamma_600_2016PostVFP_HLT-3ab30fc3f54543258c8ebb8fadbb2996/USER'
+config                                = config()
 
 
-# pset                                   = 'aNTGC_ZNuNuG_200_UMN_step5_Run2_2016_HIPM_AODSIM.py'
-# jobName                                = "aNTGC_ZNuNuGamma_600_2016PreVFP_AODSIM"
-# inputDataset                           = '/aNTGC_ZNuNuGamma_600_2016PreVFP_GEN/mwadud-aNTGC_ZNuNuGamma_600_2016PreVFP_HLT-3ab30fc3f54543258c8ebb8fadbb2996/USER'
+# v1 already submitted by Mohammad - 1M events
+# version         = 'v1'
+# inputDataset    = '/GJets_FlatPtHat_200_2021_05_12_v1_GEN/rusack-GJets_FlatPtHat_200_2021_05_17_v1_HLT-1cba7fad1227c919886864247a60b1e3/USER'
+
+# For Roger - 5M events
+version       = 'v2'
+inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v2_GEN/rusack-GJets_FlatPtHat_200_2021_05_18_v2_HLT-1cba7fad1227c919886864247a60b1e3/USER'
+
+# For Mohammad - 3M events
+# version       = 'v3'
+# inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v3_GEN/mwadud-GJets_FlatPtHat_200_2021_05_17_v3_HLT-1cba7fad1227c919886864247a60b1e3/USER'
+
+# For Mohammad - 3M events
+#version       = 'v4'
+#inputDataset  = '/GJets_FlatPtHat_200_2021_05_13_v4_GEN/rusack-GJets_FlatPtHat_200_2021_05_17_v4_HLT-1cba7fad1227c919886864247a60b1e3/USER'
+
+step            = 'AOD'
+pset            = 'aNTGC_GJets_AODSIM_step5.py'
+
+# Mohammad
+#workarea        = '/afs/hep.wisc.edu/user/wadud/private/CMSSW_10_6_24/src/Configuration/GenProduction/test/GJetsGen/crab/'
+#mainOutputDir   = str('/store/user/mwadud/aNTGC/crab/')
+
+# Roger
+workarea      = '/afs/hep.wisc.edu/home/rusack/private/CMSSW_10_6_24/src/Configuration/GenProduction/test/GJetsGen/crab/'
+mainOutputDir = str('/store/user/rusack/aNTGC/crab/')
 
 
-pset                                   = 'aNTGC_ZNuNuG_200_UMN_step5_Run2_2017_AODSIM.py'
-jobName                                = "aNTGC_ZNuNuGamma_200_2017_AODSIM"
-inputDataset                           = '/aNTGC_ZNuNuGamma_200_2017_GEN/rusack-aNTGC_ZNuNuGamma_200_2017_HLT-1cba7fad1227c919886864247a60b1e3/USER'
-#jobName                                = "aNTGC_ZNuNuGamma_600_2017_AODSIM"
-#inputDataset                           = '/aNTGC_ZNuNuGamma_600_2017/mwadud-aNTGC_ZNuNuGamma_600_2017_HLT-1cba7fad1227c919886864247a60b1e3/USER'
+jobName         = str('GJets_FlatPtHat_200_') + date.today().strftime("%Y_%m_%d") + str("_") + version + str('_') + step
 
 
-#pset                                   = 'aNTGC_ZNuNuG_200_UMN_step5_Run2_2018_AODSIM.py'
-#jobName                                = "aNTGC_ZNuNuGamma_600_2018_AODSIM"
-#inputDataset                           = '/aNTGC_ZNuNuGamma_600_2018_GEN/mwadud-aNTGC_ZNuNuGamma_600_2018_HLT-b403a189a2d057e62e59ed092120c7f4/USER'
-
-
-config                                 = config()
-
-config.General.requestName             = jobName
+###################### CRAB config ######################
+config.General.requestName 	           = jobName
 config.General.workArea                = workarea
 config.General.transferLogs            = True
 config.General.instance                = 'prod'
@@ -51,8 +56,8 @@ config.General.instance                = 'prod'
 config.JobType.pluginName              = 'Analysis'
 config.JobType.psetName                = pset
 config.JobType.maxMemoryMB             = 4000
-config.JobType.maxJobRuntimeMin        = 300
-config.JobType.numCores                = 4
+config.JobType.maxJobRuntimeMin        = 700
+config.JobType.numCores	               = 1
 config.JobType.sendExternalFolder      = True
 config.JobType.sendPythonFolder        = True
 config.JobType.allowUndistributedCMSSW = True
@@ -69,6 +74,7 @@ config.Data.outLFNDirBase              = mainOutputDir
 config.Data.ignoreLocality             = True
 
 config.Site.storageSite                = 'T2_US_Wisconsin'
-config.Site.whitelist                  = ['T3_US*']
+config.Site.blacklist                  = ["T2_US_Purdue"]
+config.Site.whitelist                  = ['T3_US_UCR','T3_US_FNALLPC','T3_US_Rice','T3_US_Rutgers','T3_US_FIT','T3_US_PSC','T3_US_OSU','T3_US_TAMU','T3_US_UMD','T3_US_VC3_NotreDame','T3_US_SDSC','T3_US_Colorado','T3_US_OSG','T3_US_Princeton_ICSE','T3_US_NERSC','T3_US_Baylor','T2_US_Nebraska','T2_US_UCSD','T2_US_Wisconsin','T2_US_MIT','T3_US_TACC','T3_US_UMiss','T2_US_Caltech', 'T2_US_Florida','T2_US_Vanderbilt']
 
 submit(config)

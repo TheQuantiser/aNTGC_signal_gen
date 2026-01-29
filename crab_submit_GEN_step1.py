@@ -7,46 +7,46 @@ from datetime import date
 
 def submit(config):
     try:
-        crabCommand("submit", config = config)
+        crabCommand('submit', config = config)
     except HTTPException as hte:
         print "Failed submitting task: %s" % (hte.headers)
     except ClientException as cle:
         print "Failed submitting task: %s" % (cle)
 
-workarea                              = "/afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/"
-jobName                               = "aNTGC_ZNuNuGamma_200_2017_GEN"
-mainOutputDir                         = "/store/user/mwadud/aNTGC/crab/"
-
 config                                = config()
+
+version                               = 'v4'
+step                                  = 'GEN'
+workarea                              = '/afs/hep.wisc.edu/user/wadud/private/CMSSW_10_6_24/src/Configuration/GenProduction/test/GJetsGen/crab/'
+jobName                               = str('GJets_FlatPtHat_200_') + date.today().strftime("%Y_%m_%d") + str("_") + version + str('_') + step
+mainOutputDir                         = str('/store/user/mwadud/aNTGC/crab/')
 
 config.General.requestName            = jobName
 config.General.workArea               = workarea
 config.General.transferLogs           = True
-config.General.instance               = "prod"
+config.General.instance               = 'prod'
 
-config.JobType.pluginName             = "PrivateMC"
-config.JobType.psetName               = "aNTGC_ZNuNuG_200_UMN_step1_Run2_2017_GEN.py"
+config.JobType.pluginName             = 'PrivateMC'
+config.JobType.psetName               = 'aNTGC_GJets_GEN_step1.py'
 config.JobType.maxMemoryMB            = 4000
-config.JobType.eventsPerLumi          = 5000
-config.JobType.maxJobRuntimeMin       = 1000
+config.JobType.eventsPerLumi          = 1000
+config.JobType.maxJobRuntimeMin       = 5760
 config.JobType.numCores	              = 4
 config.JobType.sendExternalFolder     = True
 config.JobType.sendPythonFolder       = True
 
 config.Data.allowNonValidInputDataset = True
-config.Data.inputDBS                  = "global"
+config.Data.inputDBS                  = 'global'
 config.Data.outputPrimaryDataset      = jobName
-config.Data.splitting                 = "EventBased"
-config.Data.unitsPerJob               = 10000
+config.Data.splitting                 = 'EventBased'
+config.Data.unitsPerJob               = 50000
 config.Data.totalUnits                = 3000000
 config.Data.publication               = True
 config.Data.outLFNDirBase             = mainOutputDir
-config.Data.ignoreLocality            = True
 #config.Data.outputDatasetTag         = jobName
+config.Data.ignoreLocality            = True
 
-config.Site.storageSite               = "T2_US_Wisconsin"
+config.Site.storageSite               = 'T2_US_Wisconsin'
 config.Site.whitelist                 = ["T2_US*"]
-# config.Site.whitelist                 = ["T2_US_Wisconsin"]
-
 
 submit(config)
