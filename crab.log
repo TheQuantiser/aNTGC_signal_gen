@@ -1,0 +1,542 @@
+DEBUG 2021-10-22 03:17:44.043 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-10-22 03:17:44.043 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-22 03:17:44.043 UTC: 	 Executing command: 'status'
+DEBUG 2021-10-22 03:17:44.043 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+ERROR 2021-10-22 03:17:44.045 UTC: 	 Error: /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/SMcrabsubmit/crab_SM_ZNuNuGamma_MadgraphLO_AOD is not a valid CRAB project directory.
+ERROR 2021-10-22 03:17:44.045 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/lib/CRABClient/Commands/status.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/lib/CRABClient/Commands/SubCommand.py", line 270, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/lib/CRABClient/Commands/SubCommand.py", line 646, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/SMcrabsubmit/crab_SM_ZNuNuGamma_MadgraphLO_AOD is not a valid CRAB project directory.
+INFO 2021-10-22 03:17:44.087 UTC: 	 Log file is /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab.log
+DEBUG 2021-10-25 12:01:17.859 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-10-25 12:01:17.860 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-25 12:01:17.860 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-25 12:01:17.860 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-10-25 12:01:17.861 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-10-25 12:03:51.053 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-10-25 12:03:51.054 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-25 12:03:51.054 UTC: 	 Executing command: 'kill'
+DEBUG 2021-10-25 12:03:51.054 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+ERROR 2021-10-25 12:03:51.055 UTC: 	 Cannot find .requestcache file in CRAB project directory /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab_aNTGC_ZNuNuGamma_200_2016PreVFP_SIM
+ERROR 2021-10-25 12:03:51.056 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/lib/CRABClient/Commands/SubCommand.py", line 270, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/lib/CRABClient/Commands/SubCommand.py", line 650, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210825.00/lib/CRABClient/Commands/SubCommand.py", line 512, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab_aNTGC_ZNuNuGamma_200_2016PreVFP_SIM
+INFO 2021-10-25 12:03:51.058 UTC: 	 Log file is /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab.log
+DEBUG 2021-10-29 21:38:30.420 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-10-29 21:38:30.421 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-29 21:38:30.421 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-29 21:38:30.421 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-10-29 21:38:30.422 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-10-30 20:16:18.618 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-10-30 20:16:18.619 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-30 20:16:18.619 UTC: 	 Executing command: 'remake'
+DEBUG 2021-10-30 20:16:18.619 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-10-30 20:16:18.633 UTC: 	 Checking credentials
+DEBUG 2021-10-30 20:16:18.633 UTC: 	 Found proxy file /tmp/x509up_u10040
+DEBUG 2021-10-30 20:16:18.633 UTC: 	 Getting proxy life time left
+DEBUG 2021-10-30 20:16:18.739 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -timeleft
+ output : 2510407
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:18.846 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -actimeleft
+ output : 609607
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:18.847 UTC: 	 Proxy lifetime 2510407 secs is different from voms extension lifetime 609607 secs for proxy: /tmp/x509up_u10040
+DEBUG 2021-10-30 20:16:18.847 UTC: 	 Proxy valid for 169:20:07 hours
+DEBUG 2021-10-30 20:16:19.582 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-10-30 20:16:19.702 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:19.716 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-10-30 20:16:19.716 UTC: 	 using 17a7cc1b113438651bd1318d3cefbd863f600876 as credential login name
+DEBUG 2021-10-30 20:16:20.825 UTC: 	 Executing : 
+ command : myproxy-info -l 17a7cc1b113438651bd1318d3cefbd863f600876 -s myproxy.cern.ch
+ output : username: 17a7cc1b113438651bd1318d3cefbd863f600876
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 697:20:26  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:20.828 UTC: 	 Myproxy is valid: 2510426
+DEBUG 2021-10-30 20:16:20.828 UTC: 	 Retrieving username ...
+DEBUG 2021-10-30 20:16:20.828 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-10-30 20:16:27.502 UTC: 	 username is mwadud
+DEBUG 2021-10-30 20:16:27.515 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-10-30 20:16:27.516 UTC: 	 using mwadud_CRAB as credential login name
+DEBUG 2021-10-30 20:16:28.526 UTC: 	 Executing : 
+ command : myproxy-info -l mwadud_CRAB -s myproxy.cern.ch
+ output : username: mwadud_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 719:40:05  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:28.527 UTC: 	 Myproxy is valid: 2590805
+DEBUG 2021-10-30 20:16:28.527 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 17a7cc1b113438651bd1318d3cefbd863f600876  - validity: 29 days, 1:20:26
+  Credential exists on myproxy: username: mwadud_CRAB  - validity: 29 days, 23:40:05
+DEBUG 2021-10-30 20:16:28.529 UTC: 	 Command use: remake
+DEBUG 2021-10-30 20:16:28.529 UTC: 	 Options use: ['--task=211029_214123:mwadud_crab_aNTGC_ZNuNuGamma_200_2018_SIM']
+DEBUG 2021-10-30 20:16:29.329 UTC: 	 CRABClient version: v3.210825
+DEBUG 2021-10-30 20:16:29.329 UTC: 	 Instance is prod
+DEBUG 2021-10-30 20:16:29.329 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-10-30 20:16:29.329 UTC: 	 Command api workflow
+INFO 2021-10-30 20:16:29.330 UTC: 	 Remaking crab_aNTGC_ZNuNuGamma_200_2018_SIM folder.
+INFO 2021-10-30 20:16:29.336 UTC: 	 Remaking .requestcache file.
+INFO 2021-10-30 20:16:29.338 UTC: 	 Success: Finished remaking project directory crab_aNTGC_ZNuNuGamma_200_2018_SIM
+INFO 2021-10-30 20:16:29.344 UTC: 	 Log file is /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab.log
+DEBUG 2021-10-30 20:16:36.541 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-10-30 20:16:36.542 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-30 20:16:36.542 UTC: 	 Executing command: 'remake'
+DEBUG 2021-10-30 20:16:36.542 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-10-30 20:16:36.554 UTC: 	 Checking credentials
+DEBUG 2021-10-30 20:16:36.555 UTC: 	 Found proxy file /tmp/x509up_u10040
+DEBUG 2021-10-30 20:16:36.555 UTC: 	 Getting proxy life time left
+DEBUG 2021-10-30 20:16:36.661 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -timeleft
+ output : 2510389
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:36.767 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -actimeleft
+ output : 609589
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:36.768 UTC: 	 Proxy lifetime 2510389 secs is different from voms extension lifetime 609589 secs for proxy: /tmp/x509up_u10040
+DEBUG 2021-10-30 20:16:36.768 UTC: 	 Proxy valid for 169:19:49 hours
+DEBUG 2021-10-30 20:16:37.516 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-10-30 20:16:37.636 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:37.649 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-10-30 20:16:37.649 UTC: 	 using 17a7cc1b113438651bd1318d3cefbd863f600876 as credential login name
+DEBUG 2021-10-30 20:16:38.658 UTC: 	 Executing : 
+ command : myproxy-info -l 17a7cc1b113438651bd1318d3cefbd863f600876 -s myproxy.cern.ch
+ output : username: 17a7cc1b113438651bd1318d3cefbd863f600876
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 697:20:08  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:38.661 UTC: 	 Myproxy is valid: 2510408
+DEBUG 2021-10-30 20:16:38.661 UTC: 	 Retrieving username ...
+DEBUG 2021-10-30 20:16:38.661 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-10-30 20:16:40.118 UTC: 	 username is mwadud
+DEBUG 2021-10-30 20:16:40.131 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-10-30 20:16:40.132 UTC: 	 using mwadud_CRAB as credential login name
+DEBUG 2021-10-30 20:16:41.140 UTC: 	 Executing : 
+ command : myproxy-info -l mwadud_CRAB -s myproxy.cern.ch
+ output : username: mwadud_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 719:39:52  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-10-30 20:16:41.141 UTC: 	 Myproxy is valid: 2590792
+DEBUG 2021-10-30 20:16:41.142 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 17a7cc1b113438651bd1318d3cefbd863f600876  - validity: 29 days, 1:20:08
+  Credential exists on myproxy: username: mwadud_CRAB  - validity: 29 days, 23:39:52
+DEBUG 2021-10-30 20:16:41.144 UTC: 	 Command use: remake
+DEBUG 2021-10-30 20:16:41.144 UTC: 	 Options use: ['--task=211029_214007:mwadud_crab_aNTGC_ZNuNuGamma_200_2017_SIM']
+DEBUG 2021-10-30 20:16:41.823 UTC: 	 CRABClient version: v3.210825
+DEBUG 2021-10-30 20:16:41.823 UTC: 	 Instance is prod
+DEBUG 2021-10-30 20:16:41.823 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-10-30 20:16:41.823 UTC: 	 Command api workflow
+INFO 2021-10-30 20:16:41.824 UTC: 	 Remaking crab_aNTGC_ZNuNuGamma_200_2017_SIM folder.
+INFO 2021-10-30 20:16:41.829 UTC: 	 Remaking .requestcache file.
+INFO 2021-10-30 20:16:41.831 UTC: 	 Success: Finished remaking project directory crab_aNTGC_ZNuNuGamma_200_2017_SIM
+INFO 2021-10-30 20:16:41.837 UTC: 	 Log file is /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab.log
+DEBUG 2021-11-03 23:48:37.810 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-03 23:48:37.811 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-03 23:48:37.811 UTC: 	 Executing command: 'tasks'
+DEBUG 2021-11-03 23:48:37.811 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-03 23:48:37.825 UTC: 	 Checking credentials
+DEBUG 2021-11-03 23:48:37.825 UTC: 	 Found proxy file /tmp/x509up_u10040
+DEBUG 2021-11-03 23:48:37.826 UTC: 	 Getting proxy life time left
+DEBUG 2021-11-03 23:48:37.932 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -timeleft
+ output : 2587955
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-03 23:48:38.039 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -actimeleft
+ output : 687154
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-03 23:48:38.040 UTC: 	 Proxy lifetime 2587955 secs is different from voms extension lifetime 687154 secs for proxy: /tmp/x509up_u10040
+DEBUG 2021-11-03 23:48:38.040 UTC: 	 Proxy valid for 190:52:34 hours
+DEBUG 2021-11-03 23:48:38.717 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2021-11-03 23:48:38.830 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u10040 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-03 23:48:38.840 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-11-03 23:48:38.840 UTC: 	 using 17a7cc1b113438651bd1318d3cefbd863f600876 as credential login name
+DEBUG 2021-11-03 23:48:39.950 UTC: 	 Executing : 
+ command : myproxy-info -l 17a7cc1b113438651bd1318d3cefbd863f600876 -s myproxy.cern.ch
+ output : username: 17a7cc1b113438651bd1318d3cefbd863f600876
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 719:56:20  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-03 23:48:39.953 UTC: 	 Myproxy is valid: 2591780
+DEBUG 2021-11-03 23:48:39.953 UTC: 	 Retrieving username ...
+DEBUG 2021-11-03 23:48:39.953 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-11-03 23:48:41.570 UTC: 	 username is mwadud
+DEBUG 2021-11-03 23:48:41.584 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-11-03 23:48:41.584 UTC: 	 using mwadud_CRAB as credential login name
+DEBUG 2021-11-03 23:48:42.695 UTC: 	 Executing : 
+ command : myproxy-info -l mwadud_CRAB -s myproxy.cern.ch
+ output : username: mwadud_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mwadud/CN=793344/CN=Mohammad Abrar Wadud
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 719:56:53  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-03 23:48:42.696 UTC: 	 Myproxy is valid: 2591813
+DEBUG 2021-11-03 23:48:42.697 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 17a7cc1b113438651bd1318d3cefbd863f600876  - validity: 29 days, 23:56:20
+  Credential exists on myproxy: username: mwadud_CRAB  - validity: 29 days, 23:56:53
+DEBUG 2021-11-03 23:48:42.697 UTC: 	 Command use: tasks
+DEBUG 2021-11-03 23:48:42.697 UTC: 	 Options use: []
+DEBUG 2021-11-03 23:48:43.372 UTC: 	 CRABClient version: v3.210825
+DEBUG 2021-11-03 23:48:43.373 UTC: 	 Instance is prod
+DEBUG 2021-11-03 23:48:43.373 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-11-03 23:48:43.373 UTC: 	 Command api workflow
+INFO 2021-11-03 23:48:44.156 UTC: 	 
+List of tasks from 2021-10-04 until 2021-11-03
+INFO 2021-11-03 23:48:44.156 UTC: 	 Beware that STATUS here does not include information from grid jobs
+INFO 2021-11-03 23:48:44.156 UTC: 	 ================================================================================
+INFO 2021-11-03 23:48:44.156 UTC: 	 NAME								STATUS
+INFO 2021-11-03 23:48:44.156 UTC: 	 ================================================================================
+INFO 2021-11-03 23:48:44.157 UTC: 	 211029_214123:mwadud_crab_aNTGC_ZNuNuGamma_200_2018_SIM
+								SUBMITTED
+INFO 2021-11-03 23:48:44.157 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.157 UTC: 	 211029_214007:mwadud_crab_aNTGC_ZNuNuGamma_200_2017_SIM
+								SUBMITTED
+INFO 2021-11-03 23:48:44.157 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.157 UTC: 	 211025_122734:mwadud_crab_aNTGC_ZNuNuGamma_200_2016PreVFP_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.157 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.158 UTC: 	 211025_122631:mwadud_crab_aNTGC_ZNuNuGamma_600_2016PreVFP_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.158 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.158 UTC: 	 211025_122519:mwadud_crab_aNTGC_ZNuNuGamma_200_2016PostVFP_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.158 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.158 UTC: 	 211025_122219:mwadud_crab_aNTGC_ZNuNuGamma_600_2016PostVFP_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.158 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.159 UTC: 	 211025_122139:mwadud_crab_aNTGC_ZNuNuGamma_200_2017_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.159 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.159 UTC: 	 211025_122016:mwadud_crab_aNTGC_ZNuNuGamma_600_2017_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.159 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.159 UTC: 	 211025_121641:mwadud_crab_aNTGC_ZNuNuGamma_200_2018_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.159 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.160 UTC: 	 211025_121536:mwadud_crab_aNTGC_ZNuNuGamma_600_2018_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.160 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.160 UTC: 	 211025_120331:mwadud_crab_aNTGC_ZNuNuGamma_200_2016PreVFP_SIM
+								SUBMITTED
+INFO 2021-11-03 23:48:44.160 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.160 UTC: 	 211025_120156:mwadud_crab_aNTGC_ZNuNuGamma_200_2016PostVFP_SIM
+								KILLED
+INFO 2021-11-03 23:48:44.160 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.160 UTC: 	 211023_193727:mwadud_crab_aNTGCZNuNuGamma2002017GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.161 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.161 UTC: 	 211023_193514:mwadud_crab_aNTGCZNuNuGamma2002018GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.161 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.161 UTC: 	 211023_193251:mwadud_crab_aNTGCZNuNuGamma2002016PreVFPGEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.161 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.161 UTC: 	 211023_193035:mwadud_crab_aNTGCZNuNuGamma2002016PostVFPGEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.162 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.162 UTC: 	 211023_192821:mwadud_crab_aNTGCZNuNuGamma6002016PostVFPGEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.162 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.162 UTC: 	 211023_192600:mwadud_crab_aNTGCZNuNuGamma6002016PreVFPGEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.162 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.162 UTC: 	 211023_192337:mwadud_crab_aNTGCZNuNuGamma6002018GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.163 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.163 UTC: 	 211023_192111:mwadud_crab_aNTGCZNuNuGamma6002017
+								SUBMITTED
+INFO 2021-11-03 23:48:44.163 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.163 UTC: 	 211023_191331:mwadud_crab_aNTGCZNuNuGamma6002016PostVFPGENmwadudcrabaNTGCZNuNuGamma6002016PostVFPGEN
+								KILLED
+INFO 2021-11-03 23:48:44.163 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.163 UTC: 	 211023_191105:mwadud_crab_aNTGCZNuNuGamma6002016PreVFPGENmwadudcrabaNTGCZNuNuGamma6002016PreVFPGEN
+								KILLED
+INFO 2021-11-03 23:48:44.164 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.164 UTC: 	 211023_190849:mwadud_crab_aNTGCZNuNuGamma6002018GENmwadudcrabaNTGCZNuNuGamma6002018GEN
+								KILLED
+INFO 2021-11-03 23:48:44.164 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.164 UTC: 	 211023_190621:mwadud_crab_aNTGCZNuNuGamma6002017mwadudcrabaNTGCZNuNuGamma6002017
+								KILLED
+INFO 2021-11-03 23:48:44.164 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.164 UTC: 	 211023_185901:mwadud_crab_aNTGCZNuNuGamma6002018GENmwadudcrabaNTGCZNuNuGamma6002018GENb0c9806a67e462cfc76117a0c1785b6e
+								KILLED
+INFO 2021-11-03 23:48:44.165 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.165 UTC: 	 211023_185636:mwadud_crab_aNTGCZNuNuGamma6002017mwadudcrabaNTGCZNuNuGamma60020172e7aa344f669f222ecd552081b525815
+								KILLED
+INFO 2021-11-03 23:48:44.165 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.165 UTC: 	 211022_000514:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_AOD
+								SUBMITTED
+INFO 2021-11-03 23:48:44.165 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.165 UTC: 	 211021_183159:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_AOD
+								SUBMITTED
+INFO 2021-11-03 23:48:44.166 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.166 UTC: 	 211021_043716:mwadud_crab_aNTGC_ZNuNuGamma_200_2017_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.166 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.166 UTC: 	 211021_043021:mwadud_crab_aNTGC_ZNuNuGamma_200_2018_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.166 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.166 UTC: 	 211021_042844:mwadud_crab_aNTGC_ZNuNuGamma_200_2016PreVFP_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.167 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.167 UTC: 	 211021_042657:mwadud_crab_aNTGC_ZNuNuGamma_200_2016PostVFP_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.167 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.167 UTC: 	 211021_005756:mwadud_crab_aNTGC_ZNuNuGamma_600_2016PostVFP_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.167 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.167 UTC: 	 211021_005529:mwadud_crab_aNTGC_ZNuNuGamma_600_2016PreVFP_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.167 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.168 UTC: 	 211021_004820:mwadud_crab_aNTGC_ZNuNuGamma_600_2018_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.168 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.168 UTC: 	 211020_224713:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_AOD
+								SUBMITTED
+INFO 2021-11-03 23:48:44.168 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.168 UTC: 	 211020_222424:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_AOD
+								KILLED
+INFO 2021-11-03 23:48:44.168 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.169 UTC: 	 211020_195835:mwadud_crab_aNTGC_ZNuNuGamma_600_2017
+								SUBMITTED
+INFO 2021-11-03 23:48:44.169 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.169 UTC: 	 211020_194713:mwadud_crab_aNTGC_ZNuNuGamma_600_UMN
+								KILLED
+INFO 2021-11-03 23:48:44.169 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.169 UTC: 	 211020_180516:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_HLT
+								SUBMITTED
+INFO 2021-11-03 23:48:44.169 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.170 UTC: 	 211020_053856:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_HLT
+								SUBMITTED
+INFO 2021-11-03 23:48:44.170 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.170 UTC: 	 211019_062223:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_PREMIX
+								SUBMITTED
+INFO 2021-11-03 23:48:44.170 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.170 UTC: 	 211019_055920:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_PREMIX
+								SUBMITTED
+INFO 2021-11-03 23:48:44.170 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.170 UTC: 	 211019_055308:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.170 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.171 UTC: 	 211019_050714:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.171 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.171 UTC: 	 211019_044406:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.171 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.171 UTC: 	 211017_225954:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.171 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.171 UTC: 	 211017_225602:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.171 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.172 UTC: 	 211016_210215:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.172 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.172 UTC: 	 211016_204653:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.172 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.172 UTC: 	 211016_204546:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_PREMIX
+								KILLED
+INFO 2021-11-03 23:48:44.172 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.172 UTC: 	 211012_233546:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_SIM
+								SUBMITTED
+INFO 2021-11-03 23:48:44.172 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.173 UTC: 	 211012_170413:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_SIM
+								SUBMITTED
+INFO 2021-11-03 23:48:44.173 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.173 UTC: 	 211012_132807:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_v2_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.173 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.173 UTC: 	 211012_071045:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.173 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.173 UTC: 	 211012_064150:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.173 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.174 UTC: 	 211012_063957:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.174 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.174 UTC: 	 211012_063513:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.174 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.174 UTC: 	 211012_055233:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.174 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.174 UTC: 	 211012_053131:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.175 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.175 UTC: 	 211012_052904:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.175 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.175 UTC: 	 211012_045846:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.175 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.175 UTC: 	 211012_045223:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.175 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.175 UTC: 	 211012_042712:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.176 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.176 UTC: 	 211012_042323:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.176 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.176 UTC: 	 211012_041946:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.176 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.176 UTC: 	 211012_040251:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.176 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.176 UTC: 	 211012_035344:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.177 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.177 UTC: 	 211012_033543:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.177 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.177 UTC: 	 211012_025224:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.177 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.177 UTC: 	 211012_021224:mwadud_crab_SM_ZNuNuGamma_MadgraphLO_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.177 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.177 UTC: 	 211012_012620:mwadud_crab_SM_ZNuNuG_madgraphLO_v1_GEN
+								KILLED
+INFO 2021-11-03 23:48:44.178 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.178 UTC: 	 211011_194022:mwadud_crab_SM_ZNuNuG_madgraphLO_v1_GEN
+								SUBMITTED
+INFO 2021-11-03 23:48:44.178 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.178 UTC: 	 211006_194552:mwadud_crab_DYJetsToLLM50HT800to1200TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.178 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.178 UTC: 	 211006_194310:mwadud_crab_DYJetsToLLM50HT70to100TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.178 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.178 UTC: 	 211006_194035:mwadud_crab_DYJetsToLLM50HT600to800TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.179 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.179 UTC: 	 211006_193800:mwadud_crab_DYJetsToLLM50HT600to800TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL16MiniAODv2106X
+								KILLED
+INFO 2021-11-03 23:48:44.179 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.179 UTC: 	 211006_193524:mwadud_crab_DYJetsToLLM50HT400to600TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.179 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.179 UTC: 	 211006_193254:mwadud_crab_DYJetsToLLM50HT2500toInfTuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.179 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.179 UTC: 	 211006_193017:mwadud_crab_DYJetsToLLM50HT200to400TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.180 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.180 UTC: 	 211006_192740:mwadud_crab_DYJetsToLLM50HT1200to2500TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.180 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.180 UTC: 	 211006_192504:mwadud_crab_DYJetsToLLM50HT100to200TuneCP5PSweights13TeVmadgraphMLMpythia8RunIISummer20UL17MiniAODv2106X
+								SUBMITTED
+INFO 2021-11-03 23:48:44.180 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-11-03 23:48:44.180 UTC: 	 
+
+INFO 2021-11-03 23:48:44.233 UTC: 	 Log file is /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab.log
+DEBUG 2021-11-04 02:33:19.567 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-04 02:33:19.567 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-04 02:33:19.567 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-04 02:33:19.567 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-04 02:33:19.569 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-04 02:35:15.440 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-04 02:35:15.441 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-04 02:35:15.441 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-04 02:35:15.441 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-04 02:35:15.442 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-05 21:47:16.540 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-05 21:47:16.540 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-05 21:47:16.540 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-05 21:47:16.540 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-05 21:47:16.542 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-07 21:52:40.801 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-07 21:52:40.802 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-07 21:52:40.802 UTC: 	 Executing command: 'status'
+DEBUG 2021-11-07 21:52:40.802 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-07 21:52:41.419 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-07 21:52:41.419 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-07 21:52:41.419 UTC: 	 Executing command: 'status'
+DEBUG 2021-11-07 21:52:41.419 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-07 21:52:45.078 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-07 21:52:45.079 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-07 21:52:45.079 UTC: 	 Executing command: 'status'
+DEBUG 2021-11-07 21:52:45.079 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+DEBUG 2021-11-07 21:52:45.677 UTC: 	 CRAB Client version: v3.210825
+DEBUG 2021-11-07 21:52:45.677 UTC: 	 Running on: Linux login03.hep.wisc.edu 5.4.134-1.el7.elrepo.x86_64 #1 SMP Thu Jul 22 08:58:15 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-07 21:52:45.678 UTC: 	 Executing command: 'status'
+DEBUG 2021-11-07 21:52:45.678 UTC: 	 Found CRAB cache file /afs/hep.wisc.edu/home/wadud/.crab3
+ERROR 2021-11-09 23:40:08.080 UTC: 	 Keyboard Interrupted
+INFO 2021-11-09 23:40:08.085 UTC: 	 Log file is /afs/hep.wisc.edu/user/wadud/private/signal_production/CMSSW_10_6_29/src/GeneratorInterface/LHEInterface/aNTGCcrabsubmit/crab.log

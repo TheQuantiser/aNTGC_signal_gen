@@ -1,0 +1,2 @@
+# Ignore any directory whose name starts with crab_
+crab_*/
