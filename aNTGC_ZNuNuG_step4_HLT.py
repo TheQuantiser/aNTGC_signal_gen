@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: --nThreads 1 --fileout _HLT.root --filein file:_PREMIX.root --mc --eventcontent RAWSIM --datatier GEN-SIM-RAW --conditions 94X_mc2017_realistic_v15 --mc --step HLT:2e34v40 --geometry DB:Extended --era Run2_2017 -n 10 --python_filename aNTGC_GJets_HLT_step4.py --customise Configuration/DataProcessing/Utils.addMonitoring --customise_commands process.source.bypassVersionCheck = cms.untracked.bool(True) --no_exec
+# with command line options: --nThreads 4 --fileout file:aNTGC_ZNuNuG_HLT.root --filein file:aNTGC_ZNuNuG_PREMIX.root --mc --eventcontent RAWSIM --datatier GEN-SIM-RAW --conditions 94X_mc2017_realistic_v15 --mc --step HLT:2e34v40 --geometry DB:Extended --era Run2_2017 -n 100 --python_filename aNTGC_ZNuNuG_step4_HLT.py --customise Configuration/DataProcessing/Utils.addMonitoring --customise_commands process.source.bypassVersionCheck = cms.untracked.bool(True) --no_exec
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
@@ -22,12 +22,12 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10)
+    input = cms.untracked.int32(100)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('file:_PREMIX.root'),
+    fileNames = cms.untracked.vstring('file:aNTGC_ZNuNuG_PREMIX.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -37,7 +37,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('--nThreads nevts:10'),
+    annotation = cms.untracked.string('--nThreads nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -52,7 +52,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(20971520),
-    fileName = cms.untracked.string('_HLT.root'),
+    fileName = cms.untracked.string('file:aNTGC_ZNuNuG_HLT.root'),
     outputCommands = process.RAWSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -73,6 +73,10 @@ process.schedule.extend(process.HLTSchedule)
 process.schedule.extend([process.endjob_step,process.RAWSIMoutput_step])
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
+
+#Setup FWK for multithreaded
+process.options.numberOfThreads=cms.untracked.uint32(4)
+process.options.numberOfStreams=cms.untracked.uint32(0)
 
 # customisation of the process.
 

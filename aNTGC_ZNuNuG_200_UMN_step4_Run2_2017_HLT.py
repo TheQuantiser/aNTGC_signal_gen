@@ -2,12 +2,12 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: --nThreads 4 --fileout file:GJets_FlatPtHat_200_SIM.root --filein file:GJets_FlatPtHat_200_GEN.root --mc --eventcontent RAWSIM --datatier GEN-SIM --conditions 106X_mc2017_realistic_v8 --beamspot Realistic25ns13TeVEarly2017Collision --mc --step SIM --geometry DB:Extended --era Run2_2017 -n 10 --python_filename aNTGC_GJets_SIM_step2.py --customise Configuration/DataProcessing/Utils.addMonitoring --runUnscheduled --no_exec
+# with command line options: --nThreads 4 --fileout file:aNTGC_ZNuNuG_200_UMN_HLT.root --filein file:aNTGC_ZNuNuG_200_UMN_PREMIX.root --mc --eventcontent RAWSIM --datatier GEN-SIM-RAW --conditions 94X_mc2017_realistic_v15 --step HLT:2e34v40 --geometry DB:Extended --era Run2_2017 -n 100 --python_filename aNTGC_ZNuNuG_200_UMN_step4_Run2_2017_HLT.py --customise Configuration/DataProcessing/Utils.addMonitoring --customise_commands process.source.bypassVersionCheck = cms.untracked.bool(True) --no_exec
 import FWCore.ParameterSet.Config as cms
 
-from Configuration.Eras.Era_Run2_2017_cff import Run2_2017
+from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('SIM',Run2_2017)
+process = cms.Process('HLT',eras.Run2_2017)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -16,19 +16,18 @@ process.load('FWCore.MessageService.MessageLogger_cfi')
 process.load('Configuration.EventContent.EventContent_cff')
 process.load('SimGeneral.MixingModule.mixNoPU_cfi')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
-process.load('Configuration.StandardSequences.GeometrySimDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
-process.load('Configuration.StandardSequences.SimIdeal_cff')
+process.load('HLTrigger.Configuration.HLT_2e34v40_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10)
+    input = cms.untracked.int32(100)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('file:GJets_FlatPtHat_200_GEN.root'),
+    fileNames = cms.untracked.vstring('file:aNTGC_ZNuNuG_200_UMN_PREMIX.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -38,7 +37,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('--nThreads nevts:10'),
+    annotation = cms.untracked.string('--nThreads nevts:100'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -47,13 +46,13 @@ process.configurationMetadata = cms.untracked.PSet(
 
 process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
     compressionAlgorithm = cms.untracked.string('LZMA'),
-    compressionLevel = cms.untracked.int32(1),
+    compressionLevel = cms.untracked.int32(9),
     dataset = cms.untracked.PSet(
-        dataTier = cms.untracked.string('GEN-SIM'),
+        dataTier = cms.untracked.string('GEN-SIM-RAW'),
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(20971520),
-    fileName = cms.untracked.string('file:GJets_FlatPtHat_200_SIM.root'),
+    fileName = cms.untracked.string('file:aNTGC_ZNuNuG_200_UMN_HLT.root'),
     outputCommands = process.RAWSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -61,24 +60,23 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
 # Additional output definition
 
 # Other statements
-process.XMLFromDBSource.label = cms.string("Extended")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '106X_mc2017_realistic_v8', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '94X_mc2017_realistic_v15', '')
 
 # Path and EndPath definitions
-process.simulation_step = cms.Path(process.psim)
 process.endjob_step = cms.EndPath(process.endOfProcess)
 process.RAWSIMoutput_step = cms.EndPath(process.RAWSIMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.simulation_step,process.endjob_step,process.RAWSIMoutput_step)
+process.schedule = cms.Schedule()
+process.schedule.extend(process.HLTSchedule)
+process.schedule.extend([process.endjob_step,process.RAWSIMoutput_step])
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
 #Setup FWK for multithreaded
 process.options.numberOfThreads=cms.untracked.uint32(4)
 process.options.numberOfStreams=cms.untracked.uint32(0)
-process.options.numberOfConcurrentLuminosityBlocks=cms.untracked.uint32(1)
 
 # customisation of the process.
 
@@ -88,14 +86,17 @@ from Configuration.DataProcessing.Utils import addMonitoring
 #call to customisation function addMonitoring imported from Configuration.DataProcessing.Utils
 process = addMonitoring(process)
 
-# End of customisation functions
-#do not add changes to your config after this point (unless you know what you are doing)
-from FWCore.ParameterSet.Utilities import convertToUnscheduled
-process=convertToUnscheduled(process)
+# Automatic addition of the customisation function from HLTrigger.Configuration.customizeHLTforMC
+from HLTrigger.Configuration.customizeHLTforMC import customizeHLTforMC 
 
+#call to customisation function customizeHLTforMC imported from HLTrigger.Configuration.customizeHLTforMC
+process = customizeHLTforMC(process)
+
+# End of customisation functions
 
 # Customisation from command line
 
+process.source.bypassVersionCheck = cms.untracked.bool(True)
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
